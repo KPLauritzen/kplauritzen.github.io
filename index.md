@@ -11,14 +11,21 @@ Data Scientist at Danske Bank.
 
 ### Experience
 
-- **Data Scientist**, 2017-Present,
-  Pricing Excellence at Danske Bank. Responsible for setting interest rates for loans and credits in Denmark. 
-  
-- **PhD in Computational Chemistry**, 2014-2017,
-  Group of Gemma Solomon, University of Copenhagen. Predicting structual properties of nano-scale systems. 
+- **Data Scientist**, 2017-Present, 
 
-### Fun projects
+  Pricing Excellence at Danske Bank. 
+  Responsible for setting interest rates for loans and credits in Denmark. 
+
+- **PhD in Computational Chemistry**, 2014-2017,
+
+  Group of Gemma Solomon, University of Copenhagen.
+  Predicting structual properties of nano-scale systems. 
+  
+  [Publications](https://scholar.google.dk/citations?user=w3jhmcoAAAAJ)
+
+### Fun/silly projects
 
 - [World Cup 2018 predictions](https://github.com/KPLauritzen/worldcup2018)
 - [AirBnb but for bathrooms - POOPR](https://github.com/poopr)
+- [Johnson as a Service](http://kplauritzen.dk/jaas/)
 
