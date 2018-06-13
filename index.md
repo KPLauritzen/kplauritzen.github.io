@@ -1,6 +1,9 @@
+---
+layout: default
+---
 ## Kasper Primdal Lauritzen
 
-Data Scientist at Danske Bank. 
+Data Scientist at Danske Bank.
 
 ### Contact
 
@@ -11,16 +14,16 @@ Data Scientist at Danske Bank.
 
 ### Experience
 
-- **Data Scientist**, 2017-Present, 
+- **Data Scientist**, 2017-Present,
 
-  Pricing Excellence at Danske Bank. 
-  Responsible for setting interest rates for loans and credits in Denmark. 
+  Pricing Excellence at Danske Bank.
+  Responsible for setting interest rates for loans and credits in Denmark.
 
 - **PhD in Computational Chemistry**, 2014-2017,
 
   Group of Gemma Solomon, University of Copenhagen.
-  Predicting structual properties of nano-scale systems. 
-  
+  Predicting structual properties of nano-scale systems.
+
   [Publications](https://scholar.google.dk/citations?user=w3jhmcoAAAAJ)
 
 ### Fun/silly projects
@@ -29,3 +32,12 @@ Data Scientist at Danske Bank.
 - [AirBnb but for bathrooms - POOPR](https://github.com/poopr)
 - [Johnson as a Service](http://kplauritzen.dk/jaas/)
 
+
+### Blog posts
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
