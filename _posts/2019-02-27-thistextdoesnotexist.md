@@ -10,4 +10,4 @@ I stole samples from the recent OpenAI [language model](https://blog.openai.com/
 
 Many thanks to [Peter Ericson](https://github.com/pgericson) for helping me bodge some javascript together for this project. I have absolutely no idea what I'm doing, so anything that remotely works is entirely Peters fault.
 
-See the thing [here](http://kplauritzen.dk/thistextdoesnotexist/) and we also bought [thistextdoesnotexist.com](thistextdoesnotexist.com) because that seemed reasonable at the time.
+See the thing [here](http://kplauritzen.dk/thistextdoesnotexist/) and we also bought [thistextdoesnotexist.com](http://thistextdoesnotexist.com) because that seemed reasonable at the time.
