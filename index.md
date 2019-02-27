@@ -7,7 +7,7 @@ Data Scientist at Danske Bank.
 
 ### Contact
 
-- Email: me(at)KPLauritzen.dk
+- Email: github(at)KPLauritzen.dk
 - GitHub: [KPLauritzen](https://github.com/KPLauritzen)
 - Twitter: [KPLauritzen](https://twitter.com/kplauritzen)
 - LinkedIn: [KPLauritzen](https://www.linkedin.com/in/kplauritzen/)
