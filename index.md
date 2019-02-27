@@ -14,10 +14,15 @@ Data Scientist at Danske Bank.
 
 ### Experience
 
-- **Data Scientist**, 2017-Present,
+- **Data Scientist**, 2019-Present,
+
+  Smart Data at DFDS.
+  Doing smart stuff with data.
+
+- **Data Scientist**, 2017-2019,
 
   Pricing Excellence at Danske Bank.
-  Responsible for setting interest rates for loans and credits in Denmark.
+  Predicting customer behaviour and optimizing interest rates for bank loans in several Nordic markets.
 
 - **PhD in Computational Chemistry**, 2014-2017,
 
