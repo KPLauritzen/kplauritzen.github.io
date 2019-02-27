@@ -28,10 +28,9 @@ Data Scientist at Danske Bank.
 
 ### Fun/silly projects
 
+- [This text does not exist - Machine generated text](http://kplauritzen.dk/thistextdoesnotexist/)
 - [World Cup 2018 predictions](https://github.com/KPLauritzen/worldcup2018)
-- [AirBnb but for bathrooms - POOPR](https://github.com/poopr)
-- [Johnson as a Service](http://kplauritzen.dk/jaas/)
-
+- [AirBnb but for bathrooms - POOPR](https://github.com/poopr)`
 
 ### Blog posts
 <ul>
