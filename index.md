@@ -3,7 +3,7 @@ layout: default
 ---
 ## Kasper Primdal Lauritzen
 
-Data Scientist at Danske Bank.
+Data Scientist at DFDS.
 
 ### Contact
 
@@ -17,7 +17,7 @@ Data Scientist at Danske Bank.
 - **Data Scientist**, 2019-Present,
 
   Smart Data at DFDS.
-  Doing smart stuff with data.
+  Building internal tool to produce quotes for logistic sales. Frontend, backend and ML modelling. 
 
 - **Data Scientist**, 2017-2019,
 
@@ -33,9 +33,10 @@ Data Scientist at Danske Bank.
 
 ### Fun/silly projects
 
-- [This text does not exist - Machine generated text](http://kplauritzen.dk/thistextdoesnotexist/)
+- [This text does not exist - Machine generated text](www.thistextdoesnotexist.com/)
 - [World Cup 2018 predictions](https://github.com/KPLauritzen/worldcup2018)
 - [AirBnb but for bathrooms - POOPR](https://github.com/poopr)`
+- [Foosball tracking for financial institutions - Moneyball](www.moneyball.dk)
 
 ### Blog posts
 <ul>
