@@ -33,10 +33,10 @@ Data Scientist at DFDS.
 
 ### Fun/silly projects
 
-- [This text does not exist - Machine generated text](www.thistextdoesnotexist.com/)
+- [This text does not exist - Machine generated text](www.thistextdoesnotexist.com/) - Now defunct
 - [World Cup 2018 predictions](https://github.com/KPLauritzen/worldcup2018)
 - [AirBnb but for bathrooms - POOPR](https://github.com/poopr)`
-- [Foosball tracking for financial institutions - Moneyball](www.moneyball.dk)
+- [Foosball tracking for financial institutions - Moneyball](https://github.com/moneyball-dk/moneyball_app)
 
 ### Blog posts
 <ul>
