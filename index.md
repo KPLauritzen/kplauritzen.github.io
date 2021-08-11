@@ -5,12 +5,22 @@ layout: default
 
 Data Scientist at DFDS.
 
-### Contact
+### Blog posts
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
 
-- Email: github(at)KPLauritzen.dk
-- GitHub: [KPLauritzen](https://github.com/KPLauritzen)
-- Twitter: [KPLauritzen](https://twitter.com/kplauritzen)
-- LinkedIn: [KPLauritzen](https://www.linkedin.com/in/kplauritzen/)
+### Fun/silly projects
+
+- [This text does not exist - Machine generated text](www.thistextdoesnotexist.com/) - Now defunct
+- [World Cup 2018 predictions](https://github.com/KPLauritzen/worldcup2018)
+- [AirBnb but for bathrooms - POOPR](https://github.com/poopr)`
+- [Foosball tracking for financial institutions - Moneyball](https://github.com/moneyball-dk/moneyball_app)
+
 
 ### Experience
 
@@ -31,18 +41,9 @@ Data Scientist at DFDS.
 
   [Publications](https://scholar.google.dk/citations?user=w3jhmcoAAAAJ)
 
-### Fun/silly projects
 
-- [This text does not exist - Machine generated text](www.thistextdoesnotexist.com/) - Now defunct
-- [World Cup 2018 predictions](https://github.com/KPLauritzen/worldcup2018)
-- [AirBnb but for bathrooms - POOPR](https://github.com/poopr)`
-- [Foosball tracking for financial institutions - Moneyball](https://github.com/moneyball-dk/moneyball_app)
+### Contact
 
-### Blog posts
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-  {% endfor %}
-</ul>
+- GitHub: [KPLauritzen](https://github.com/KPLauritzen)
+- Twitter: [KPLauritzen](https://twitter.com/kplauritzen)
+- LinkedIn: [KPLauritzen](https://www.linkedin.com/in/kplauritzen/)
