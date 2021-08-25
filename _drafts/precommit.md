@@ -6,17 +6,129 @@ title: "Use pre-commit to save time and avoid mistakes"
 # Why use pre-commit
 
 # Individual checks
-## Stop arguing over code style
-- black
-- flake8
 ## Stop dealing with whitespace diffs in your PRs
 - whitespace
 - end of file fixer
 ## You probably committed this by mistake
-- check large files
-- merge conflict
+```yaml
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.2.0
+    hooks:
+    -   id: check-ast
+    -   id: check-json
+    -   id: check-yaml
+    -   id: debug-statements
+    -   id: detect-aws-credentials
+        args: [--allow-missing-credentials]
+    -   id: detect-private-key
+    -   id: check-merge-conflict
+    -   id: check-added-large-files
+        args: ['--maxkb=3000']
+```
+Here is a bunch of hooks that will 
+
+- Check if your Python code is valid (avoiding those `SyntaxError`s that sometimes crop up)
+- Check that json and yaml files can be parsed
+- Check that you don't have any leftover `breakpoint()` statements from a debugging session.
+- Check that you haven't accidentally committed secrets.
+- Check that you haven't committed an unresolved merge conflict, like leaving `>>>>>>>>>>>>>>>>>>>>>> HEAD` in the file. 
+- Check that you haven't committed an unusally large file. If you need large files inside your repo, use git-lfs.
 ## Make Jupyter Notebook diffs easier to deal with
 - nbstripout
+## Stop arguing over code style
+```yaml
+-   repo: https://github.com/psf/black
+    rev: 21.7b0
+    hooks:
+    -   id: black
+-   repo: https://gitlab.com/pycqa/flake8
+    rev: 3.7.9
+    hooks:
+    - id: flake8
+```
+[`black`](https://black.readthedocs.io/en/stable/) is a code autoformatter. It has opinions on what is good style and bad, and I mostly agree with those opinions. The *very* cool thing about `black` is that it does not just find instances where you are not following the style, it can automatically fix your code to follow the style.
+
+[`flake8`](https://flake8.pycqa.org/en/latest/) is a linter. It can check more kinds style errors, but it will not fix anything. It can only complain. This is mostly fine, because it is often trivial to fix the issues that `flake8` raises. 
+
+Both of these tools needs some config to work as desired. See [Full setup](#full-setup) for details.
+
 ## Optional static type checking
-- mypy
+```yaml
+-   repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v0.782
+    hooks:
+    -   id: mypy
+        args: [--ignore-missing-imports]
+```
+You can optionally do static typing in Python now. 
+[`mypy`](http://mypy-lang.org/) is a tool to run static analysis on your python files and it will complain if you are inputting or return types that don't match your typehints. 
 # Full setup
+`.pre-commit-config.yaml`:
+```yaml
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.2.0
+    hooks:
+    -   id: check-ast
+    -   id: check-json
+    -   id: check-yaml
+    -   id: debug-statements
+    -   id: detect-aws-credentials
+        args: [--allow-missing-credentials]
+    -   id: detect-private-key
+    -   id: check-merge-conflict
+    -   id: check-added-large-files
+        args: ['--maxkb=3000']
+-   repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v0.782
+    hooks:
+    -   id: mypy
+        args: [--ignore-missing-imports]
+-   repo: https://github.com/pycqa/isort
+    rev: 5.8.0
+    hooks:
+    - id: isort
+      name: isort
+-   repo: https://github.com/psf/black
+    rev: 21.7b0
+    hooks:
+    -   id: black
+-   repo: https://gitlab.com/pycqa/flake8
+    rev: 3.7.9
+    hooks:
+    - id: flake8
+
+```
+
+`pyproject.toml`:
+```toml
+[tool.black]
+line-length = 100
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 100
+```
+
+`.flake8`
+```toml
+[flake8]
+ignore = E203, E266, E501, W503
+max-line-length = 100
+max-complexity = 18
+select = B,C,E,F,W,T4,B9
+```
