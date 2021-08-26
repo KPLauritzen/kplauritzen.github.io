@@ -7,8 +7,27 @@ title: "Use pre-commit to save time and avoid mistakes"
 
 # Individual checks
 ## Stop dealing with whitespace diffs in your PRs
-- whitespace
-- end of file fixer
+```yaml
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.2.0
+    hooks:
+    -   id: end-of-file-fixer
+    -   id: trailing-whitespace
+-   repo: https://github.com/pycqa/isort
+    rev: 5.8.0
+    hooks:
+    - id: isort
+      name: isort
+```
+The two first hooks fixes small whitespace mistakes. Each file should end with just a newline, and there should be no whitespace at the end of a line.
+
+[`isort`](https://pycqa.github.io/isort/) sorts your import statements. It is a minor thing, but it will group imports into 3 groups: 
+1) Included in Python stdlib.
+2) Third party library.
+3) Local code. 
+
+There is some setup needed to make it compatible with `black`. See [Full setup](#full-setup) for details.
+
 ## You probably committed this by mistake
 ```yaml
 -   repo: https://github.com/pre-commit/pre-commit-hooks
@@ -31,10 +50,25 @@ Here is a bunch of hooks that will
 - Check that json and yaml files can be parsed
 - Check that you don't have any leftover `breakpoint()` statements from a debugging session.
 - Check that you haven't accidentally committed secrets.
-- Check that you haven't committed an unresolved merge conflict, like leaving `>>>>>>>>>>>>>>>>>>>>>> HEAD` in the file. 
+- Check that you haven't committed an unresolved merge conflict, like leaving 
+  ```
+  >>>>>>>>>>>>>>>>>>>>>> HEAD
+  ``` 
+  in the file. 
 - Check that you haven't committed an unusally large file. If you *actually* need large files inside your repo, use [git-lfs](https://git-lfs.github.com/).
 ## Make Jupyter Notebook diffs easier to deal with
-- nbstripout
+```yaml
+-   repo: https://github.com/kynan/nbstripout
+    rev: 0.5.0
+    hooks:
+    - id: nbstripout
+```
+
+[`nbstripout`](https://github.com/kynan/nbstripout) is very useful if you commit a lot of Jupyter Notebooks to your repo. The output cells are saved in the file, so if you are outputting some large plots, each notebook can become quite big. 
+If your notebooks are not just one-off explorations, but you come back to them more than once, this will make the PR diffs much easier to read. 
+
+If that is NOT the case, maybe you don't want or need this one. 
+
 ## Stop arguing over code style
 ```yaml
 -   repo: https://github.com/psf/black
@@ -62,8 +96,10 @@ Both of these tools needs some config to work as desired. See [Full setup](#full
 ```
 You can optionally do static typing in Python now. 
 [`mypy`](http://mypy-lang.org/) is a tool to run static analysis on your python files and it will complain if you are inputting or return types that don't match your typehints. 
+
 # Full setup
-`.pre-commit-config.yaml`:
+If you just want to copy my setup, add these three files to the root of your repo:
+## `.pre-commit-config.yaml`:
 ```yaml
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
@@ -100,7 +136,7 @@ repos:
 
 ```
 
-`pyproject.toml`:
+## `pyproject.toml`:
 ```toml
 [tool.black]
 line-length = 100
@@ -124,7 +160,7 @@ profile = "black"
 line_length = 100
 ```
 
-`.flake8`
+## `.flake8`
 ```toml
 [flake8]
 ignore = E203, E266, E501, W503
