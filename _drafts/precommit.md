@@ -32,7 +32,7 @@ Here is a bunch of hooks that will
 - Check that you don't have any leftover `breakpoint()` statements from a debugging session.
 - Check that you haven't accidentally committed secrets.
 - Check that you haven't committed an unresolved merge conflict, like leaving `>>>>>>>>>>>>>>>>>>>>>> HEAD` in the file. 
-- Check that you haven't committed an unusally large file. If you need large files inside your repo, use git-lfs.
+- Check that you haven't committed an unusally large file. If you *actually* need large files inside your repo, use [git-lfs](https://git-lfs.github.com/).
 ## Make Jupyter Notebook diffs easier to deal with
 - nbstripout
 ## Stop arguing over code style
