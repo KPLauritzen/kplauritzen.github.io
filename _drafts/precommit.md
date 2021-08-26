@@ -4,6 +4,25 @@ title: "Use pre-commit to save time and avoid mistakes"
 ---
 
 # Why use pre-commit
+I'm working in a team of data scientists, and most of us don't have a "proper" software background. Most here have some sort of natural sciences education and have picked up machine learning and software development along the way.
+This means that we don't have the same software craftmanship foundation to build from when our ML models need to grow, scale, and change. 
+
+There is a lot of ways to improve in this area, but a simple one to implement for a whole team in one go is to require `pre-commit` installed in all projects. This is a tool that lets you define a set of checks that are performed on your code every time you make a commit in git (you are using git, right?).
+
+## Installation
+Make (or copy from [below](#full-setup)) a file called  `.pre-commit-config.yaml` and place it in the root of your repository. 
+Then
+```shell
+pip install precommit
+pre-commit install
+```
+## Run
+Every time you `git commit` the hooks you have defined in `.pre-commit-config.yaml` will be run *on the changed files*. 
+
+If for some reason you want to run the hooks on *all files* (for instance in your CI/CD) pipeline, you can do
+```shell
+pre-commit run --all-files
+```
 
 # Individual checks
 ## Stop dealing with whitespace diffs in your PRs
