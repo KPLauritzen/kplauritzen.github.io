@@ -13,7 +13,7 @@ There is a lot of ways to improve in this area, but a simple one to implement fo
 Make (or copy from [below](#full-setup)) a file called  `.pre-commit-config.yaml` and place it in the root of your repository. 
 Then
 ```shell
-pip install precommit
+pip install pre-commit
 pre-commit install
 ```
 ## Run
