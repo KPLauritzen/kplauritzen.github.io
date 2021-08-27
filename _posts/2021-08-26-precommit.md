@@ -75,7 +75,9 @@ Here is a bunch of hooks that will
   ``` 
   in the file. 
 - Check that you haven't committed an unusally large file. If you *actually* need large files inside your repo, use [git-lfs](https://git-lfs.github.com/).
+
 ## Make Jupyter Notebook diffs easier to deal with
+
 ```yaml
 -   repo: https://github.com/kynan/nbstripout
     rev: 0.5.0
@@ -152,7 +154,10 @@ repos:
     rev: 3.7.9
     hooks:
     - id: flake8
-
+-   repo: https://github.com/kynan/nbstripout
+    rev: 0.5.0
+    hooks:
+    - id: nbstripout
 ```
 
 ## `pyproject.toml`:
