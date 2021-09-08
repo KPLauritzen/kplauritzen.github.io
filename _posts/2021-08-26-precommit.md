@@ -100,6 +100,8 @@ If that is NOT the case, maybe you don't want or need this one.
     rev: 3.7.9
     hooks:
     - id: flake8
+      additional_dependencies:
+          - flake8-unused-arguments
 ```
 [`black`](https://black.readthedocs.io/en/stable/) is a code autoformatter. It has opinions on what is good style and bad, and I mostly agree with those opinions. The *very* cool thing about `black` is that it does not just find instances where you are not following the style, it can automatically fix your code to follow the style.
 
@@ -154,6 +156,8 @@ repos:
     rev: 3.7.9
     hooks:
     - id: flake8
+      additional_dependencies:
+          - flake8-unused-arguments
 -   repo: https://github.com/kynan/nbstripout
     rev: 0.5.0
     hooks:
@@ -190,5 +194,9 @@ line_length = 100
 ignore = E203, E266, E501, W503
 max-line-length = 100
 max-complexity = 18
-select = B,C,E,F,W,T4,B9
+select = B,C,E,F,W,T4,B9,U100
+unused-arguments-ignore-abstract-functions = True
 ```
+
+# Updates
+- 2021-09-08: Add `flake8-unused-arguments`.
