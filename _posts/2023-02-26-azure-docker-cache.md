@@ -87,5 +87,24 @@ steps:
     displayName: Build Docker image
     env:
       DOCKER_BUILDKIT: 1
-
 ```
+
+If the above yaml is saved in a `templates.yaml` file, you can use it in your pipeline like this:
+
+```yaml
+jobs:
+  - job: BuildDockerImage
+    steps:
+      - template: templates.yaml
+        parameters:
+          docker_image_name: 'my-image'
+          additional_docker_build_args: '--build-arg SOME_ARG=some_value'
+          dockerfile_path: 'Dockerfile'
+          docker_build_context: '.'
+```
+
+### References
+
+- [Morten Hels](https://www.linkedin.com/in/morten-hels/) - Great data scientist moonlighting as an excellent data engineer.
+- [Stack Overflow post](https://stackoverflow.com/a/69198252) that Morten claims got him on the right track.
+- Docker documentation on [`docker buildx`](https://docs.docker.com/engine/reference/commandline/buildx/).
