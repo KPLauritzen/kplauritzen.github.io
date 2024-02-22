@@ -3,7 +3,7 @@ layout: default
 ---
 ## Kasper Primdal Lauritzen
 
-Data Scientist at DFDS.
+Machine Learning Engineer at Vestas
 
 ### Blog posts
 <ul>
@@ -24,10 +24,14 @@ Data Scientist at DFDS.
 
 ### Experience
 
-- **Data Scientist**, 2019-Present,
+- **Machine Learning Engineer**, 2024-present,
 
-  Smart Data at DFDS.
-  Building internal tool to produce quotes for logistic sales. Frontend, backend and ML modelling. 
+  AI Center of Enablement at Vestas.
+
+- **Data Scientist**, 2019-2024,
+
+  Data and Analytics at DFDS.
+  Deploying, monitoring, packaging, and testing machine learning models.
 
 - **Data Scientist**, 2017-2019,
 
