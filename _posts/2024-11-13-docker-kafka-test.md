@@ -142,6 +142,8 @@ NOTE: The `docker-services` fixture starts ALL the docker services in the `docke
 This passes the test above (and a few other tests I wrote):
 
 ```python
+from confluent_kafka import Consumer, KafkaError, Producer
+
 class KafkaQueueService(BaseQueueService):
     def __init__(self, broker: str, topic: str, group_id: str):
         # Configuration for the producer and consumer
