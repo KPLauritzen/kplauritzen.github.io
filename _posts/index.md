@@ -1,20 +1,18 @@
 ---
 layout: default
 ---
-## Kasper Primdal Lauritzen
+# Kasper Primdal Lauritzen
 
 Machine Learning Engineer at Vestas
 
-
-### Fun/silly projects
+## Fun/silly projects
 
 - [This text does not exist - Machine generated text](www.thistextdoesnotexist.com/) - Now defunct
 - [World Cup 2018 predictions](https://github.com/KPLauritzen/worldcup2018)
 - [AirBnb but for bathrooms - POOPR](https://github.com/poopr)`
 - [Foosball tracking for financial institutions - Moneyball](https://github.com/moneyball-dk/moneyball_app)
 
-
-### Experience
+## Experience
 
 - **Machine Learning Engineer**, 2024-present,
 
@@ -37,8 +35,7 @@ Machine Learning Engineer at Vestas
 
   [Publications](https://scholar.google.dk/citations?user=w3jhmcoAAAAJ)
 
-
-### Contact
+## Contact
 
 - GitHub: [KPLauritzen](https://github.com/KPLauritzen)
 - LinkedIn: [KPLauritzen](https://www.linkedin.com/in/kplauritzen/)
