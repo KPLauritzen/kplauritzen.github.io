@@ -1,10 +1,6 @@
----
-layout: post
-title: "Test kafka clients with Docker"
----
+# Test kafka clients with Docker
 
-
-`TL;DR`: Use `pytest-docker` to create a test fixture that starts a Kafka container. 
+`TL;DR`: Use `pytest-docker` to create a test fixture that starts a Kafka container.
 
 ## Problem: I want to test my Kafka client, but I don't have a Kafka cluster
 
@@ -135,7 +131,7 @@ def test_kafka_queue_can_publish_and_consume(kafka_url):
 
 Now I can test my `KafkaQueueService` class without needing a Kafka cluster. This even works on my CI/CD pipeline in Azure DevOps.
 
-NOTE: The `docker-services` fixture starts ALL the docker services in the `docker-compose.yml` file. 
+NOTE: The `docker-services` fixture starts ALL the docker services in the `docker-compose.yml` file.
 
 ## Bonus: The passing implementation of `KafkaQueueService`
 

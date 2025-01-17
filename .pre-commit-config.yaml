@@ -1,0 +1,23 @@
+
+repos:
+  - repo: https://github.com/abravalheri/validate-pyproject
+    rev: v0.23
+    hooks:
+      - id: validate-pyproject
+
+  - repo: https://github.com/igorshubovych/markdownlint-cli
+    rev: v0.43.0
+    hooks:
+      - id: markdownlint-fix
+        args:
+          - --disable
+          - MD013
+  - repo: https://github.com/executablebooks/mdformat
+    rev: 0.7.21
+    hooks:
+      - id: mdformat
+        additional_dependencies:
+          - mdformat-mkdocs==4.0.0
+          - mdformat-footnote==0.1.1
+        exclude: |
+          _posts/2018-06-13-worldcup.md

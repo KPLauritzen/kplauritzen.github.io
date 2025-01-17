@@ -1,7 +1,5 @@
----
-layout: post
-title: "This text does not exist"
----
+# This text does not exist
+
 `TL;DR`: I stole a thing.
 
 ### Generating text for fun and profit
