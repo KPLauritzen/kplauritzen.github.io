@@ -10,7 +10,7 @@ We are using Docker containers to package our models, and we are using Azure Pip
 For most projects we will build the docker images in:
 
 1. The pull request: To make sure the docker image can be built and sometimes also to run some tests in the new container.
-2. After merging to main: To build the final image that will be deployed to production.
+1. After merging to main: To build the final image that will be deployed to production.
 
 Step 1 usually happens more than once, as issues with a PR will often require multiple iterations of reviews and fixes.
 For this reason, it is important that the build time is as short as possible. Long feedback loops are not good for productivity.
@@ -38,9 +38,9 @@ docker buildx build \
 ```
 
 1. Create a new builder, and use it. This is needed to make the `--cache-from` and `--cache-to` options available. I'm using the `docker-container` driver, but there are other options available. This one is just the easiest to set up, both locally and in a pipeline.
-2. Use the local cache as a source for the build. This will make the build use the cached layers if they are available.
-3. Save the layers that were used in the build to the local cache. This will make the layers available for the next build.
-4. Set the [output](https://docs.docker.com/engine/reference/commandline/buildx_build/#output) to be a docker image. This is needed to make the image available for the next step in the pipeline, e.g. pushing it to a registry.
+1. Use the local cache as a source for the build. This will make the build use the cached layers if they are available.
+1. Save the layers that were used in the build to the local cache. This will make the layers available for the next build.
+1. Set the [output](https://docs.docker.com/engine/reference/commandline/buildx_build/#output) to be a docker image. This is needed to make the image available for the next step in the pipeline, e.g. pushing it to a registry.
 
 ### The pipeline template
 

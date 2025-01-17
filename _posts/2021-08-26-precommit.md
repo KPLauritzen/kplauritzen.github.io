@@ -9,7 +9,7 @@ There is a lot of ways to improve in this area, but a simple one to implement fo
 
 ## Installation
 
-Make (or copy from [below](#full-setup)) a file called  `.pre-commit-config.yaml` and place it in the root of your repository.
+Make (or copy from [below](#full-setup)) a file called `.pre-commit-config.yaml` and place it in the root of your repository.
 Then
 
 ```shell
@@ -48,9 +48,9 @@ The two first hooks fixes small whitespace mistakes. Each file should end with j
 
 [`isort`](https://pycqa.github.io/isort/) sorts your import statements. It is a minor thing, but it will group imports into 3 groups:
 
-1) Included in Python stdlib.
-2) Third party library.
-3) Local code.
+1. Included in Python stdlib.
+1. Third party library.
+1. Local code.
 
 There is some setup needed to make it compatible with `black`. See [Full setup](#full-setup) for details.
 
@@ -75,16 +75,21 @@ There is some setup needed to make it compatible with `black`. See [Full setup](
 Here is a bunch of hooks that will
 
 - Check if your Python code is valid (avoiding those `SyntaxError`s that sometimes crop up)
+
 - Check that json and yaml files can be parsed
+
 - Check that you don't have any leftover `breakpoint()` statements from a debugging session.
+
 - Check that you haven't accidentally committed secrets.
+
 - Check that you haven't committed an unresolved merge conflict, like leaving
 
-  ```
-  >>>>>>>>>>>>>>>>>>>>>> HEAD
-  ```
+    ```
+    >>>>>>>>>>>>>>>>>>>>>> HEAD
+    ```
 
-  in the file.
+    in the file.
+
 - Check that you haven't committed an unusally large file. If you *actually* need large files inside your repo, use [git-lfs](https://git-lfs.github.com/).
 
 ## Make Jupyter Notebook diffs easier to deal with

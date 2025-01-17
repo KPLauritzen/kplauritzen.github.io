@@ -181,6 +181,6 @@ We are again abusing `dataclass.astuple` to let us access each class variable pr
 To be honest, I don't really understand why `__array__` does not work for lists of custom dataclasses,
 but `__len__` and `__getitem__` does.
 If numpy is looping through each element one at a time to add it to an array,
-we might run into some performance issues at some point.  
+we might run into some performance issues at some point.
 
 But, for now, this looks fairly clean for my taste and it is very practical.

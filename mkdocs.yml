@@ -1,3 +1,4 @@
 site_name: KPLauritzen.dk
+site_url: https://kplauritzen.dk
 docs_dir: _posts
 theme: material
