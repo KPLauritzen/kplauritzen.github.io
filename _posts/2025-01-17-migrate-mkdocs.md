@@ -100,3 +100,8 @@ jobs:
             mkdocs-material-
       - run: uv run mkdocs gh-deploy --force
 ```
+
+EDIT: After publishing I had some problems with my custom domain, `kplauritzen.dk`. Every time I ran `mkdocs gh-deploy` it wanted to deploy to `kplauritzen.github.io` instead.
+
+I think the solution is to create a `CNAME` file in `_posts/` as that will get picked up during the build.
+See the [docs](https://www.mkdocs.org/user-guide/deploying-your-docs/#custom-domains).
