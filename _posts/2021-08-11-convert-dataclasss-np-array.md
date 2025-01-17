@@ -1,7 +1,5 @@
----
-layout: post
-title: "Converting between custom dataclasses and numpy arrays"
----
+# Converting between custom dataclasses and numpy arrays
+
 `TL;DR`: Implement `__array__()`, `__len__()` and `__getitem__()` methods on your `dataclass`.
 See [the final section](#the-real-solution) for a working example.
 

@@ -1,7 +1,4 @@
----
-layout: post
-title: "Use pre-commit to save time and avoid mistakes"
----
+# Use pre-commit to save time and avoid mistakes
 
 # Why use pre-commit
 

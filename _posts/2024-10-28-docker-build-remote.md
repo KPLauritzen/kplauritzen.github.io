@@ -1,7 +1,4 @@
----
-layout: post
-title: "Build docker images on remote Linux VM"
----
+# Build docker images on remote Linux VM
 
 `TL;DR`: Create a Linux VM in the cloud, then create a docker context for it with
 

@@ -1,6 +1,3 @@
----
-layout: default
----
 # Kasper Primdal Lauritzen
 
 Machine Learning Engineer at Vestas

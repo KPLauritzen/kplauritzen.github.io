@@ -1,7 +1,4 @@
----
-layout: post
-title: "Caching Docker images in Azure DevOps Pipelines"
----
+# Caching Docker images in Azure DevOps Pipelines
 
 `TL;DR`: Go to the [bottom of the post](#the-pipeline-template) to see the full Pipeline template.
 

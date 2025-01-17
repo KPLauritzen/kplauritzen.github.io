@@ -1,8 +1,4 @@
----
-layout: post
-title: "Test kafka clients with Docker"
----
-
+# Test kafka clients with Docker
 
 `TL;DR`: Use `pytest-docker` to create a test fixture that starts a Kafka container.
 
