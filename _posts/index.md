@@ -5,14 +5,6 @@ layout: default
 
 Machine Learning Engineer at Vestas
 
-### Blog posts
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-  {% endfor %}
-</ul>
 
 ### Fun/silly projects
 
@@ -49,5 +41,4 @@ Machine Learning Engineer at Vestas
 ### Contact
 
 - GitHub: [KPLauritzen](https://github.com/KPLauritzen)
-- Twitter: [KPLauritzen](https://twitter.com/kplauritzen)
 - LinkedIn: [KPLauritzen](https://www.linkedin.com/in/kplauritzen/)
