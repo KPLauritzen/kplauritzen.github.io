@@ -6,7 +6,7 @@ lint:
     uv run pre-commit run --all-files
 
 test:
-    uv run pytest
+    uv run mkdocs build --strict
 
 docs_serve:
     uv run mkdocs serve
