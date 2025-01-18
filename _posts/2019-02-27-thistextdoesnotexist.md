@@ -2,7 +2,7 @@
 
 `TL;DR`: I stole a thing.
 
-### Generating text for fun and profit
+## Generating text for fun and profit
 
 I stole samples from the recent OpenAI [language model](https://blog.openai.com/better-language-models/), generating text without human input. This continues the [excellent](http://www.thisairbnbdoesnotexist.com/) [work](https://www.thiswaifudoesnotexist.net/) [of](https://www.thispersondoesnotexist.com/) [many](https://thiscatdoesnotexist.com/) [others](https://github.com/paubric/awesome-doesnotexist).
 
