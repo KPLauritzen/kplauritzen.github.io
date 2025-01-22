@@ -1,7 +1,5 @@
 ---
-date: 
-    created: 2021-08-26
-    updated: 2025-01-22
+date: 2021-08-26
 ---
 
 # Use pre-commit to save time and avoid mistakes
