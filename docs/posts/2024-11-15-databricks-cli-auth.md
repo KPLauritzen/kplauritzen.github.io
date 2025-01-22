@@ -28,7 +28,7 @@ In `~/.databrickscfg`, I can create a profile for each service principal, and sw
 
 Here is an example of a `~/.databrickscfg` file with two Service principal profiles:
 
-```ini
+```ini title=".databrickscfg"
 [DEFAULT]
 host  = <SOME_HOST>
 token = <SOME_TOKEN>

@@ -1,10 +1,10 @@
 ---
-date: 2021-08-26
+date: 
+    created: 2021-08-26
+    updated: 2025-01-22
 ---
 
 # Use pre-commit to save time and avoid mistakes
-
-# Why use pre-commit
 
 I'm working in a team of data scientists, and most of us don't have a "proper" software background. Most here have some sort of natural sciences education and have picked up machine learning and software development along the way.
 This means that we don't have the same software craftmanship foundation to build from when our ML models need to grow, scale, and change.
@@ -31,9 +31,9 @@ If for some reason you want to run the hooks on *all files* (for instance in you
 pre-commit run --all-files
 ```
 
-# Individual checks
+## Individual checks
 
-## Stop dealing with whitespace diffs in your PRs
+### Stop dealing with whitespace diffs in your PRs
 
 ```yaml
 -   repo: https://github.com/pre-commit/pre-commit-hooks
@@ -58,7 +58,7 @@ The two first hooks fixes small whitespace mistakes. Each file should end with j
 
 There is some setup needed to make it compatible with `black`. See [Full setup](#full-setup) for details.
 
-## You probably committed this by mistake
+### You probably committed this by mistake
 
 ```yaml
 -   repo: https://github.com/pre-commit/pre-commit-hooks
@@ -88,7 +88,7 @@ Here is a bunch of hooks that will
 
 - Check that you haven't committed an unresolved merge conflict, like leaving
 
-    ```
+    ```text
     >>>>>>>>>>>>>>>>>>>>>> HEAD
     ```
 
@@ -96,7 +96,7 @@ Here is a bunch of hooks that will
 
 - Check that you haven't committed an unusally large file. If you *actually* need large files inside your repo, use [git-lfs](https://git-lfs.github.com/).
 
-## Make Jupyter Notebook diffs easier to deal with
+### Make Jupyter Notebook diffs easier to deal with
 
 ```yaml
 -   repo: https://github.com/kynan/nbstripout
@@ -110,7 +110,7 @@ If your notebooks are not just one-off explorations, but you come back to them m
 
 If that is NOT the case, maybe you don't want or need this one.
 
-## Stop arguing over code style
+### Stop arguing over code style
 
 ```yaml
 -   repo: https://github.com/psf/black
@@ -131,7 +131,7 @@ If that is NOT the case, maybe you don't want or need this one.
 
 Both of these tools needs some config to work as desired. See [Full setup](#full-setup) for details.
 
-## Optional static type checking
+### Optional static type checking
 
 ```yaml
 -   repo: https://github.com/pre-commit/mirrors-mypy
@@ -144,13 +144,12 @@ Both of these tools needs some config to work as desired. See [Full setup](#full
 You can optionally do static typing in Python now.
 [`mypy`](http://mypy-lang.org/) is a tool to run static analysis on your python files and it will complain if you are inputting or return types that don't match your typehints.
 
-# Full setup
+## Full setup
 
 If you just want to copy my setup, add these three files to the root of your repo:
 
-## `.pre-commit-config.yaml`
 
-```yaml
+```yaml title=".pre-commit-config.yaml"
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v3.2.0
@@ -191,9 +190,8 @@ repos:
     - id: nbstripout
 ```
 
-## `pyproject.toml`
 
-```toml
+```toml title="pyproject.toml"
 [tool.black]
 line-length = 100
 include = '\.pyi?$'
@@ -216,9 +214,7 @@ profile = "black"
 line_length = 100
 ```
 
-## `.flake8`
-
-```toml
+```toml title=".flake8" 
 [flake8]
 ignore = E203, E266, E501, W503
 max-line-length = 100
@@ -227,6 +223,6 @@ select = B,C,E,F,W,T4,B9,U100
 unused-arguments-ignore-abstract-functions = True
 ```
 
-# Updates
+## Updates
 
 - 2021-09-08: Add `flake8-unused-arguments`.

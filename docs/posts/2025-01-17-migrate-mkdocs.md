@@ -22,7 +22,7 @@ I start by cloning <https://github.com/KPLauritzen/kplauritzen.github.io> and op
 
 Let's create a justfile to document how to interact with the repo.
 
-```makefile
+```makefile title="justfile"
 install:
   uv sync --all-extras
   uv run pre-commit install
@@ -37,7 +37,7 @@ I set up `pyproject.toml` with `uv init` and add some packages with `uv add pre-
 
 Now I just need the most basic config for MkDocs and we are ready to serve some HTML!
 
-```yaml
+```yaml title="mkdocs.yml"
 site_name: KPLauritzen.dk
 docs_dir: _posts
 ```
@@ -75,7 +75,7 @@ After that, I follow the guide to [uv in Github Actions](https://docs.astral.sh/
 
 This is the result:
 
-```yaml
+```yaml title=".github/workflows/ci.yml"
 name: ci 
 on:
   push:

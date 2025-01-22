@@ -37,7 +37,7 @@ This is how I did it:
 
 A `docker-compose.yml` file to start a Kafka container:
 
-```yaml
+```yaml title="docker-compose.yml"
 services:
   zookeeper:
     image: 'confluentinc/cp-zookeeper:latest'

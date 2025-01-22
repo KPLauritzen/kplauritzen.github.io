@@ -6,7 +6,7 @@ date: 2023-02-26
 
 `TL;DR`: Go to the [bottom of the post](#the-pipeline-template) to see the full Pipeline template.
 
-### The problem
+## The problem
 
 In the Data Science team at DFDS, we are using Azure DevOps Pipelines to build and deploy our models.
 We are using Docker containers to package our models, and we are using Azure Pipelines for our CI/CD.
@@ -22,7 +22,7 @@ For this reason, it is important that the build time is as short as possible. Lo
 So the solution is to cache the docker images between builds. Azure Pipelines even has a [Cache task](https://learn.microsoft.com/en-us/azure/devops/pipelines/release/caching?view=azure-devops#docker-images) that claims to help with caching docker builds.
 But the commands listed on that documentation page have never worked for me.
 
-### The solution
+## The solution
 
 My brilliant friend [Morten Hels](https://www.linkedin.com/in/morten-hels/) came up with a solution that works.
 I'm taking the liberty of writing it down here, but he is the one who deserves the credit.
@@ -46,11 +46,11 @@ docker buildx build \
 1. Save the layers that were used in the build to the local cache. This will make the layers available for the next build.
 1. Set the [output](https://docs.docker.com/engine/reference/commandline/buildx_build/#output) to be a docker image. This is needed to make the image available for the next step in the pipeline, e.g. pushing it to a registry.
 
-### The pipeline template
+## The pipeline template
 
 Here is a complete [pipeline template](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/templates?view=azure-devops) that you can use in your own pipelines.
 
-```yaml
+```yaml title="templates.yaml"
 parameters:
   - name: docker_image_name
     type: string
@@ -92,7 +92,7 @@ steps:
 
 If the above yaml is saved in a `templates.yaml` file, you can use it in your pipeline like this:
 
-```yaml
+```yaml title="azure-pipelines.yml"
 jobs:
   - job: BuildDockerImage
     steps:
@@ -104,7 +104,7 @@ jobs:
           docker_build_context: '.'
 ```
 
-### References
+## References
 
 - [Morten Hels](https://www.linkedin.com/in/morten-hels/) - Great data scientist moonlighting as an excellent data engineer.
 - [Stack Overflow post](https://stackoverflow.com/a/69198252) that Morten claims got him on the right track.
