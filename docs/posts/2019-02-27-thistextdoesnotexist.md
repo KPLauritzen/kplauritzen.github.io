@@ -1,3 +1,7 @@
+---
+date: 2019-02-27
+---
+
 # This text does not exist
 
 `TL;DR`: I stole a thing.

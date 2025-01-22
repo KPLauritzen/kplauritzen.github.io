@@ -1,5 +1,6 @@
-# Kasper Primdal Lauritzen
+# About me
 
+Kasper Primdal Lauritzen
 Machine Learning Engineer at Vestas
 
 ## Fun/silly projects

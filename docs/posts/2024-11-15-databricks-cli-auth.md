@@ -1,3 +1,7 @@
+---
+date: 2024-11-15
+---
+
 # Use databricks profiles to emulate service principals
 
 `TL;DR`: Edit your `~/.databrickscfg` file to create a profile for your service principals.

@@ -1,3 +1,7 @@
+---
+date: 2021-08-26
+---
+
 # Use pre-commit to save time and avoid mistakes
 
 # Why use pre-commit

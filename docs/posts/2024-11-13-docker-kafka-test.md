@@ -1,3 +1,7 @@
+---
+date: 2024-11-13
+---
+
 # Test kafka clients with Docker
 
 `TL;DR`: Use `pytest-docker` to create a test fixture that starts a Kafka container.
