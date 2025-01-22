@@ -13,6 +13,10 @@ plugins:
       blog_toc: true
       post_url_format: "{file}"
       authors: false
+  - rss:
+      match_path: posts/.* 
+      date_from_meta:
+        as_creation: date
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
