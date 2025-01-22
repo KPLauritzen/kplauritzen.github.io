@@ -1,4 +1,23 @@
 site_name: KPLauritzen.dk
 site_url: https://kplauritzen.dk
-docs_dir: _posts
-theme: material
+
+theme:
+  name: material
+  features:
+    - content.code.copy
+
+plugins:
+  - search
+  - blog:
+      blog_dir: .
+      blog_toc: true
+      post_url_format: "{file}"
+      authors: false
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences

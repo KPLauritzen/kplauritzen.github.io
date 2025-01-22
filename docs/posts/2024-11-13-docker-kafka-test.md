@@ -1,3 +1,7 @@
+---
+date: 2024-11-13
+---
+
 # Test kafka clients with Docker
 
 `TL;DR`: Use `pytest-docker` to create a test fixture that starts a Kafka container.
@@ -33,7 +37,7 @@ This is how I did it:
 
 A `docker-compose.yml` file to start a Kafka container:
 
-```yaml
+```yaml title="docker-compose.yml"
 services:
   zookeeper:
     image: 'confluentinc/cp-zookeeper:latest'

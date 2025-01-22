@@ -1,3 +1,7 @@
+---
+date: 2025-01-17
+---
+
 # Migrating static site from Jekyll to MkDocs
 
 ## Intro
@@ -18,13 +22,13 @@ I start by cloning <https://github.com/KPLauritzen/kplauritzen.github.io> and op
 
 Let's create a justfile to document how to interact with the repo.
 
-```justfile
-install
- uv sync --all-extras
- uv run pre-commit install
+```makefile title="justfile"
+install:
+  uv sync --all-extras
+  uv run pre-commit install
 
 lint:
- uv run pre-commit run --all-files
+  uv run pre-commit run --all-files
 ```
 
 None of this works yet, there is no Python project, but it is a start.
@@ -33,7 +37,7 @@ I set up `pyproject.toml` with `uv init` and add some packages with `uv add pre-
 
 Now I just need the most basic config for MkDocs and we are ready to serve some HTML!
 
-```yaml
+```yaml title="mkdocs.yml"
 site_name: KPLauritzen.dk
 docs_dir: _posts
 ```
@@ -41,7 +45,7 @@ docs_dir: _posts
 I can see my site locally with `mkdocs serve`
 
 It's terrible, but it works! I add that as a command in the `justfile`
-![](images/migrate-1.png)
+![](../images/migrate-1.png)
 
 ## Slightly prettier
 
@@ -56,7 +60,7 @@ How little effort can I put in to make this tolerable?
 - Move `index.md` to `posts_` so we don't start with a 404 error.
 
 That's it, now it actually looks serviceable.
-![](images/migrate-2.png)
+![](../images/migrate-2.png)
 
 There is A BUNCH of improvements that could be helpful, but it is too much fun to do. I will save some of that for a rainy day.
 
@@ -71,7 +75,7 @@ After that, I follow the guide to [uv in Github Actions](https://docs.astral.sh/
 
 This is the result:
 
-```yaml
+```yaml title=".github/workflows/ci.yml"
 name: ci 
 on:
   push:

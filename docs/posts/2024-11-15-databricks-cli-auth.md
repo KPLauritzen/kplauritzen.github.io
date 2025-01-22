@@ -1,3 +1,7 @@
+---
+date: 2024-11-15
+---
+
 # Use databricks profiles to emulate service principals
 
 `TL;DR`: Edit your `~/.databrickscfg` file to create a profile for your service principals.
@@ -24,7 +28,7 @@ In `~/.databrickscfg`, I can create a profile for each service principal, and sw
 
 Here is an example of a `~/.databrickscfg` file with two Service principal profiles:
 
-```ini
+```ini title=".databrickscfg"
 [DEFAULT]
 host  = <SOME_HOST>
 token = <SOME_TOKEN>

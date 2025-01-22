@@ -1,3 +1,7 @@
+---
+date: 2021-08-11
+---
+
 # Converting between custom dataclasses and numpy arrays
 
 `TL;DR`: Implement `__array__()`, `__len__()` and `__getitem__()` methods on your `dataclass`.
@@ -143,7 +147,7 @@ That works, but it feels more like a workaround than a real solution. Should I r
 
 No, if I just implement two additional methods on the base class, I don't have to think about this any more.
 
-## Converting lists of custom dataclasses with `__len__` and `__getitem__` {#the-real-solution}
+## <a id="the-real-solution"></a> Converting lists of custom dataclasses with `__len__` and `__getitem__`
 
 ```python
 from dataclasses import dataclass, astuple
