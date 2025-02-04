@@ -20,6 +20,13 @@ I've dealt with too much of this anxiety! AUTOMATE IT AWAY!
 
 With some inspiration from my friend, [Lasse Hels](https://dk.linkedin.com/in/lasse-hels), I created this bash script for Azure DevOps Pipelines.
 
+## What it does
+
+- It is assumed to be running as part of a pull request validation pipeline
+- Assuming there is a terraform plan created in the file `tfplan`, it parses the plan as plaintext and json
+- No matter what, the plaintext plan is posted as a comment in the pull request. The comment will be collapsed by default.
+- If it finds any destructive changes in the plan, the comment will have a big scary warning and be marked as "Active". This means someone will have to look at it and resolve it before the pull request can be merged.
+
 ## The script
 
 ```shell
@@ -71,12 +78,6 @@ curl -X POST \
  -d "$JSON_PAYLOAD"
 ```
 
-## What it does
-
-- It is assumed to be running as part of a pull request validation pipeline
-- Assuming there is a terraform plan created in the file `tfplan`, it parses the plan as plaintext and json
-- No matter what, the plaintext plan is posted as a comment in the pull request. The comment will be collapsed by default.
-- If it finds any destructive changes in the plan, the comment will have a big scary warning and be marked as "Active". This means someone will have to look at it and resolve it before the pull request can be merged.
 
 ## References
 
