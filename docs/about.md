@@ -36,3 +36,4 @@ Machine Learning Engineer at Vestas
 
 - GitHub: [KPLauritzen](https://github.com/KPLauritzen)
 - LinkedIn: [KPLauritzen](https://www.linkedin.com/in/kplauritzen/)
+- Mastodon: [@KPLauritzen](https://hachyderm.io/@kplauritzen)
