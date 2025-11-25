@@ -36,6 +36,8 @@ plugins:
       authors: false
   - rss:
       match_path: posts/.* 
+      # publish fulltext in feed
+      abstract_chars_count: -1
       date_from_meta:
         as_creation: date
 markdown_extensions:
