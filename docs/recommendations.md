@@ -8,6 +8,7 @@ Here are some blogs I like.
 - [Morten Hels](https://morten.hels.dk/)
 - [Markus Wüstenberg](https://www.maragu.dev/)
 - [Zeth Odderskov](https://zeth.dk/)
+- [Willi Carlsen](https://wcarlsen.github.io/)
 
 ## Internet people
 
