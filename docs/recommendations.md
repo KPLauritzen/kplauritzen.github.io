@@ -9,6 +9,7 @@ Here are some blogs I like.
 - [Markus Wüstenberg](https://www.maragu.dev/)
 - [Zeth Odderskov](https://zeth.dk/)
 - [Willi Carlsen](https://wcarlsen.github.io/)
+- [Fred](https://rubberbottom.substack.com/)
 
 ## Internet people
 
