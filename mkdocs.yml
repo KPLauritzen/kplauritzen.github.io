@@ -40,6 +40,9 @@ plugins:
       abstract_chars_count: -1
       date_from_meta:
         as_creation: date
+extra_javascript:
+  - path: js/sse-explorer.js
+    type: module
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
